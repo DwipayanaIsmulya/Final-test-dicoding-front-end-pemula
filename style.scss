@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+// ===== Container ===== //
+
+.container {
+  width: 100%;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3d4152;
+
+  .navigation {
+    position: fixed;
+    inset: 20px 0 20px 20px;
+    width: 75px;
+    min-height: 500px;
+    background-color: #fff;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navigation ul li {
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .navigation ul li.active {
+    transform: translateX(30px);
+  }
+
+  .navigation.open ul li.active {
+    transform: translateX(10px);
+  }
+
+  .navigation ul li a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+  }
+
+  .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    line-height: 60px;
+    color: #222;
+    border-radius: 10px;
+    font-size: 1.75em;
+    transition: 0.5s;
+  }
+
+  .navigation ul li.active a .icon {
+    color: #fff;
+    background-color: var(--color);
+  }
+
+  .navigation ul li a .icon::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--color);
+    filter: blur(8px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .navigation ul li.active a .icon::before {
+    opacity: 0.5;
+  }
+
+  .main-container {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 3800px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 48px;
+      font-style: normal;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      font-style: normal;
+    }
+
+    .beranda {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+    }
+
+    .left-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      margin-left: 100px;
+    }
+
+    .right-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+    }
+    // ===== Tambah Buku ===== //
+    .tambah-buku {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .box-wrapper {
+        width: 220px;
+        height: 220px;
+        position: relative;
+
+        .box:nth-child(1) {
+          width: 150px;
+          height: 150px;
+          background-color: #ffa117;
+          position: absolute;
+        }
+
+        .box:nth-child(2) {
+          width: 150px;
+          height: 150px;
+          background-color: #fff;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      .left-container-tambah-buku-top {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        padding: 140px;
+      }
+
+      .left-container-tambah-buku-bottom {
+        display: flex;
+        height: 50%;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .right-container-tambah-buku-top {
+        display: flex;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+
+        .box:nth-child(2) {
+          background-color: #ffa117;
+        }
+
+        .box:nth-child(1) {
+          background-color: #fff;
+        }
+      }
+
+      .right-container-tambah-buku-bottom {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 400px;
+          height: 400px;
+
+          .input-container {
+            position: relative;
+            width: 400px;
+
+            .label {
+              position: absolute;
+              left: 10px;
+              top: 14px;
+              transition: all 0.2s;
+              padding: 0 2px;
+              z-index: 1;
+              color: #b3b3b3;
+              cursor: text;
+            }
+
+            .text-input {
+              border: 2px solid #fff;
+              border-radius: 5px;
+              background-color: #3d4152;
+              margin-top: 5px;
+              margin-bottom: 20px;
+              padding: 0.8rem;
+              height: 40px;
+              width: 100%;
+              outline-color: none;
+              color: #fff;
+              transition: all 0.3s;
+            }
+
+            .label::before {
+              content: "";
+              height: 5px;
+              background: #3d4152;
+              position: absolute;
+              left: 0;
+              top: 10px;
+              width: 100%;
+              z-index: -1;
+            }
+
+            .text-input:focus {
+              border: 2px solid #ffa117;
+            }
+
+            .text-input::placeholder {
+              opacity: 0;
+              transition: all 0.3s;
+              font-size: 14px;
+            }
+
+            .text-input:focus + .label,
+            .filled {
+              top: -6px;
+              color: #ffa117;
+              font-size: 12px;
+              background-color: #3d4152;
+            }
+
+            .text-input:focus::placeholder {
+              opacity: 1;
+              color: rgb(200, 200, 200);
+            }
+          }
+
+          .checkbox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+
+            input {
+              margin: 0px;
+              margin-right: 10px;
+              background-color: #3d4152;
+              border: 1px solid #fff;
+            }
+
+            p {
+              font-size: 14px;
+            }
+          }
+
+          button {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #ffa117;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    // ===== Belum Dibaca ===== //
+    .belum-dibaca {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      justify-content: center;
+      align-items: center;
+
+      .left-container-buku-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 305px;
+
+        .buku {
+          padding: 10px;
+          border: 1px solid #0fc70f;
+          box-shadow: 0 0 10px 4px #0fc70f;
+          height: 150px;
+          margin-top: 20px;
+
+          h1 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+
+          .button-buku {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .selesai {
+              background-color: #0a890a;
+              height: 30px;
+              width: 110px;
+              border-radius: 5px;
+              border: none;
+              color: #fff;
+              cursor: pointer;
+            }
+
+            .delete {
+              background-color: #c63328;
+              height: 30px;
+              width: 110px;
+              border-radius: 5px;
+              border: none;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .right-container-belum-dibaca-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: right;
+        margin-right: 100px;
+
+        p {
+          margin-left: 130px;
+        }
+      }
+    }
+    // ===== Sudah Dibaca ===== //
+    .sudah-dibaca {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      justify-content: center;
+      align-items: center;
+
+      .left-container-sudah-dibaca-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: left;
+        margin-left: 140px;
+        margin-right: 140px;
+      }
+
+      .right-container-buku-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 305px;
+
+        .buku {
+          padding: 10px;
+          border: 1px solid #2196f3;
+          box-shadow: 0 0 10px 4px #2196f3;
+          height: 150px;
+          margin-top: 20px;
+
+          h1 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+
+          .button-buku {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .selesai {
+              background-color: #2196f3;
+              height: 30px;
+              width: 110px;
+              border-radius: 5px;
+              border: none;
+              color: #fff;
+              cursor: pointer;
+            }
+
+            .delete {
+              background-color: #c63328;
+              height: 30px;
+              width: 110px;
+              border-radius: 5px;
+              border: none;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    // ===== Cari Buku ===== //
+    .cari-buku {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+      .container-cari-buku-top {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        input {
+          margin-top: 20px;
+          width: 300px;
+          height: 40px;
+          border: none;
+          background-color: #3d4152;
+          border-bottom: 1px solid #b145e9;
+          padding: 10px;
+          color: #fff;
+        }
+
+        button {
+          margin-top: 20px;
+          margin-left: 20px;
+          width: 100px;
+          height: 40px;
+          border-radius: 10px;
+          background-color: #b145e9;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      .container-cari-buku-bottom {
+        margin-top: 50px;
+
+        .right-container-buku-wrapper {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+          width: 305px;
+
+          .buku-cari {
+            padding: 10px;
+            border: 1px solid #b145e9;
+            box-shadow: 0 0 10px 4px #b145e9;
+
+            h1 {
+              font-weight: 700;
+              font-size: 18px;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

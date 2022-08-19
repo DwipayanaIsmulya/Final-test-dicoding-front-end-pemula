@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <div class="container">
+      <nav class="navigation">
+        <div class="menu-toggle"></div>
+        <ul class="list">
+          <li class="list-item active" style="--color: #f44336">
+            <a href="#beranda">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list-item" style="--color: #ffa117">
+            <a href="#tambah-buku">
+              <span class="icon">
+                <ion-icon name="book-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list-item" style="--color: #0fc70f">
+            <a href="#belum-dibaca">
+              <span class="icon">
+                <ion-icon name="bookmark-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list-item" style="--color: #2196f3">
+            <a href="#sudah-dibaca">
+              <span class="icon">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list-item" style="--color: #b145e9">
+            <a href="#cari-buku">
+              <span class="icon">
+                <ion-icon name="search-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-container">
+        <!-- Beranda -->
+
+        <div id="beranda" class="beranda">
+          <h1>Selamat <span style="color: #f44336">Datang!</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quis
+            maiores magni assumenda laboriosam magnam sed officia odit quod
+            placeat corrupti ullam, quos, pariatur, et temporibus enim deleniti
+            nulla debitis!.
+          </p>
+        </div>
+
+        <!-- Tambah Buku -->
+
+        <div id="tambah-buku" class="tambah-buku">
+          <div class="left-container">
+            <div class="left-container-tambah-buku-top">
+              <h1>Mulai <span style="color: #ffa117">Tambah</span></h1>
+              <h1><span style="color: #ffa117">Buku</span> Kamu!</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium qui voluptatum quae totam iusto nobis fugit
+                perspiciatis tempora corporis est. Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Eveniet, aliquid?
+              </p>
+            </div>
+            <div class="left-container-tambah-buku-bottom">
+              <div class="box-wrapper">
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="right-container-tambah-buku-top">
+              <div class="box-wrapper">
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+            </div>
+            <div class="right-container-tambah-buku-bottom">
+              <!-- ===== Form ===== -->
+              <form action="">
+                <div class="input-container">
+                  <input
+                    type="text"
+                    id="judul"
+                    class="text-input"
+                    autocomplete="off"
+                    placeholder="Masukkan Judul Buku"
+                    required
+                  />
+                  <label class="label" for="judul">Judul</label>
+                </div>
+                <div class="input-container">
+                  <input
+                    type="text"
+                    id="penulis"
+                    class="text-input"
+                    autocomplete="off"
+                    placeholder="Masukkan Nama Penulis"
+                    required
+                  />
+                  <label class="label" for="penulis">Penulis</label>
+                </div>
+                <div class="input-container">
+                  <input
+                    type="number"
+                    id="tahun"
+                    class="text-input"
+                    autocomplete="off"
+                    placeholder="Masukkan Tahun Buku"
+                    required
+                  />
+                  <label class="label" for="tahun">Tahun</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="" id="isComplete" />
+                  <p>Sudah Selesai Dibaca</p>
+                </div>
+                <button class="tambah" id="tambah">Tambah</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Belum Dibaca -->
+
+        <div id="belum-dibaca" class="belum-dibaca">
+          <div class="left-container">
+            <div class="left-container-buku-wrapper" id="left-container-buku-wrapper">
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="right-container-belum-dibaca-wrapper">
+              <h1>Ada Buku <span style="color: #0fc70f">Belum</span></h1>
+              <h1><span style="color: #0fc70f">Dibaca</span> Nih!</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+                sunt iste quisquam est libero blanditiis maxime sequi error
+                nostrum molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta cum accusamus, quam laboriosam veniam temporibus dolor exercitationem ex?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sudah Dibaca -->
+
+        <div id="sudah-dibaca" class="sudah-dibaca">
+          <div class="left-container">
+            <div class="left-container-sudah-dibaca-wrapper">
+              <h1>
+                Buku yang</span>
+              </h1>
+              <h1>
+                <span style="color: #2196f3">Sudah</span> Kamu
+              </h1>
+              <h1>
+                <span style="color: #2196f3">Baca</span>!
+              </h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+                sunt iste quisquam est libero blanditiis maxime sequi error
+                nostrum molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="right-container-buku-wrapper" id="right-container-buku-wrapper">
+            </div>
+          </div>
+        </div>
+
+        <!-- Cari Buku -->
+
+        <div id="cari-buku" class="cari-buku">
+          <div class="container-cari-buku-top">
+            <h1>Yuk <span style="color: #b145e9">Cari Buku</span> Kamu!</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi sunt
+              iste quisquam est libero blanditiis maxime sequi error nostrum
+              molestiae.
+            </p>
+            <form action="" id="cariBuku">
+              <input type="text" id="cariJudulBuku" autoComplete="off">
+              <button id="cari">Cari</button>
+            </form>
+          </div>
+          <div class="container-cari-buku-bottom">
+            <div class="right-container-buku-wrapper">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+  </body>
+</html>
